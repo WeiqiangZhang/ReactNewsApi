@@ -3,16 +3,22 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import theme from './style/theme';
 import { ThemeProvider } from 'styled-components';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import newsReducer from './store/reducer/newsReducer';
 
-const store = createStore();
+const rootReducer = combineReducers({
+  newsReducer: newsReducer,
+});
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <Provider store={store}>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
       <App />
-    </Provider>
-  </ThemeProvider>,
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );

@@ -1,0 +1,5 @@
+export default {
+  SET_NEWS: "SET_NEWS",
+  SET_NEWS_LOADING: "SET_NEWS_LOADING",
+  SET_NEWS_PAGE: "SET_NEWS_PAGE",
+}
