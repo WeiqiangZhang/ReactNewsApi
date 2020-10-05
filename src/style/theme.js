@@ -3,29 +3,29 @@ export default {
     defaults: {
       fontFamily: 'Arial, Helvetica, sans-serif',
       fontSize: '1rem',
-      color: '#000'
+      color: '#000',
     },
     header: {
-      color: '#fff'
+      color: '#fff',
     },
     ordinal: {
-      fontSize: '1.5em'
+      fontSize: '1.5em',
     },
     info: {
-      fontSize: '0.8em'
-    }
+      fontSize: '0.8em',
+    },
   },
   color: {
     text: {
       primary: '#000',
-      secondary: '#666'
+      secondary: '#666',
     },
     background: {
       header: '#222',
-      pagination: '#fff'
-    }
+      pagination: '#fff',
+    },
   },
   shadows: {
-    pagination: '0 1px 2px rgba(0, 0, 0, 0.1)'
-  }
+    pagination: '0 1px 2px rgba(0, 0, 0, 0.1)',
+  },
 };

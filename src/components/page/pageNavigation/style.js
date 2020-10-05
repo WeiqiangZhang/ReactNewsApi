@@ -8,7 +8,8 @@ export const Button = styled(GlobalButton)`
 `;
 
 export const PrevButton = styled(Button)`
-  color: ${(props) => props.theme.color.text[props.page === 1 ? 'secondary' : 'primary']};
+  color: ${(props) =>
+    props.theme.color.text[props.page === 1 ? 'secondary' : 'primary']};
   margin-right: 0.5rem;
 `;
 

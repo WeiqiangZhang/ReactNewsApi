@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 import { GlobalFont } from 'style/globalTheme';
 
 const rotate360 = keyframes`
@@ -33,9 +33,15 @@ export const OrdinalWrapper = styled.div`
   margin: 0 2.5rem 2rem;
 `;
 
+export const OrdinalTextWrapper = styled.div`
+  width: ${(props) => `${props.digits}rem`};
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+`;
+
 export const OrdinalText = styled(GlobalFont)`
   font-size: ${(props) => props.theme.typography.ordinal.fontSize};
-  margin-right: 1.5rem;
 `;
 
 export const OrdinalRightWrapper = styled.div`
@@ -46,7 +52,7 @@ export const OrdinalRightWrapper = styled.div`
 export const OrdinalLink = styled(GlobalFont)`
   font-weight: 600;
   margin-bottom: 0.75rem;
-  cursor: ${(props) => props.isLink ? 'pointer' : 'auto'};
+  cursor: ${(props) => (props.isLink ? 'pointer' : 'auto')};
 `;
 
 export const OrdinalInfo = styled(GlobalFont)`

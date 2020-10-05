@@ -6,8 +6,15 @@ class PageNavigation extends React.Component {
     const { news } = this.props;
     return (
       <Wrapper>
-        <PrevButton disabled={news.page === 1} page={news.page} onClick={() => this.props.prevClick()}>{'< prev'}</PrevButton>
-        <NextButton onClick={() => this.props.nextClick()}>{'next >'}</NextButton>
+        <PrevButton
+          disabled={news.page === 1}
+          page={news.page}
+          onClick={() => this.props.prevClick()}>
+          {'< prev'}
+        </PrevButton>
+        <NextButton onClick={() => this.props.nextClick()}>
+          {'next >'}
+        </NextButton>
       </Wrapper>
     );
   }
