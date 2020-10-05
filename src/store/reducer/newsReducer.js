@@ -2,8 +2,9 @@ import actionTypes from '../actionTypes';
 
 const initialState = {
   news: {},
-  page: 0,
+  page: 1,
   loading: null,
+  loaded: false,
 };
 
 const newsReducer = (state = initialState, action) => {
@@ -18,6 +19,7 @@ const newsReducer = (state = initialState, action) => {
         ...state,
         news: { ...state.news, [action.page]: action.data },
         loading: false,
+        loaded: true,
       };
     case actionTypes.SET_NEWS_PAGE:
       return {

@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
   return {
-    news: state.newsReducer,
+    newsReducer: state.newsReducer,
   };
 };
 
